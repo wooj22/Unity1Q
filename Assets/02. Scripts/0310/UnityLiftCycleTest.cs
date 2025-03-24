@@ -16,5 +16,8 @@ public class UnityLiftCycleTest : MonoBehaviour
     void LateUpdate() { print("LateUpdate " + gameObject.name); }
     void OnEnable() { print("OnEnable " + gameObject.name); }
     void OnDisable() { print("OnDisable " + gameObject.name); }
-
+    private void OnDestroy()
+    {
+        print("OnDestroy " + gameObject.name);
+    }
 }

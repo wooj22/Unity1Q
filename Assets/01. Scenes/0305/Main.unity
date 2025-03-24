@@ -331,7 +331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &174196795
 Transform:
   m_ObjectHideFlags: 0
@@ -1614,7 +1614,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1629212435
 Transform:
   m_ObjectHideFlags: 0
@@ -2099,6 +2099,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6261406044205799414, guid: 563487f2bb60ddc44a9fe154ec5f3f05,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6518313335437677776, guid: 563487f2bb60ddc44a9fe154ec5f3f05,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2471,6 +2476,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car_Red
       objectReference: {fileID: 0}
+    - target: {fileID: 4992880473828808713, guid: d4ba648c60deb63458a4400f1e72d844,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2582,6 +2592,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Car_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124977967958988843, guid: 7c1c882679de68f4b91af35539f3ae38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5966305576392283533, guid: 7c1c882679de68f4b91af35539f3ae38,
         type: 3}
@@ -2899,6 +2914,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Car_Yellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 653794661379196222, guid: c47645d752468ef45bd849aa11c68b0c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4059402288255587837, guid: c47645d752468ef45bd849aa11c68b0c,
         type: 3}

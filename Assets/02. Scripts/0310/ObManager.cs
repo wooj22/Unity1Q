@@ -12,10 +12,17 @@ public class ObManager : MonoBehaviour
     [SerializeField] private KeyCode deleteKey = KeyCode.D;
     [SerializeField] private List<GameObject> enemyList = new List<GameObject>();
 
-     /// C를 누르면 랜덤한 위치의 enemy 생성
-     /// D를 누르면 최근에 생성된 enmey 제거
-     /// enemy는 플레이어와 충돌시 콜라이더를 끄고 소멸 (Cubcontroll.cs)
-     /// X 를 누르면 기본 오브젝트(큐브 생성), 10초뒤 자동 소멸
+    /// C를 누르면 랜덤한 위치의 enemy 생성
+    /// D를 누르면 최근에 생성된 enmey 제거
+    /// enemy는 플레이어와 충돌시 콜라이더를 끄고 소멸 (Cubcontroll.cs)
+    /// X 를 누르면 기본 오브젝트(큐브 생성), 10초뒤 자동 소멸
+
+    private void Start()
+    {
+        // Resources 폴더에 있는 오브젝트를 코드로 로드할 수 있음
+        //GameObject ob = Instantiate(Resources.Load<GameObject>("Player"));
+    }
+
 
     private void Update()
     {
@@ -64,6 +71,6 @@ public class ObManager : MonoBehaviour
     {
         GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Cube);
         obj.transform.SetParent(cubePrent);
-        Destroy(this.gameObject, 10f);
+        Destroy(obj.gameObject, 1.5f);
     }
 }
