@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.Timeline;
 using UnityEngine;
 
-public class TransformControll : MonoBehaviour
+public class VectorTargetMove : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private float rotationSpeed;
