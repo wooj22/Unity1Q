@@ -43,7 +43,7 @@ public class InputTest : MonoBehaviour
             // screen to world position (Laycast, ÇÇÅ·)
             Ray ray = Camera.main.ScreenPointToRay(mousePos);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray.origin, ray.direction * 1000, out hit))
             {
                 Debug.Log("Hit Object : " + hit.collider.gameObject.name);
                 Debug.Log("Hit Point : " + hit.point);

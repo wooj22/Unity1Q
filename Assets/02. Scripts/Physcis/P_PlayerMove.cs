@@ -21,13 +21,16 @@ public class P_PlayerMove : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         Cursor.visible = false;
     }
-
     private void Update()
+    {
+        Shoot();
+    }
+
+    private void FixedUpdate()
     {
         InputXY();
         Move();
         Rotation();
-        Shoot();
     }
 
     private void InputXY()

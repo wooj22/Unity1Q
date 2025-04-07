@@ -12,7 +12,7 @@ public class P_PlayerBullet : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         rb.velocity = transform.forward * moveSpeed;
     }

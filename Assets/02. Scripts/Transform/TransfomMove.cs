@@ -15,8 +15,8 @@ public class TransfomMove : MonoBehaviour
 
     void Update()
     {
-        //Move();
-        Move2();
+        Move();
+        //Move2();
         Rotation();
         LookatTarget();
     }
