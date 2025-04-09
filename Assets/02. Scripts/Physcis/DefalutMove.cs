@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DefalutMove : MonoBehaviour
 {
+    // move
     [SerializeField] private float moveSpeed;
     [SerializeField] private float rotationSpeed;
 
@@ -12,9 +13,11 @@ public class DefalutMove : MonoBehaviour
     private float moveY;
     private float mouseX;
 
+    // trace
     private Vector3 targetPos;
     private bool isTrace;
 
+    // component
     private Rigidbody rb;
 
 
@@ -25,6 +28,7 @@ public class DefalutMove : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if ((Input.GetMouseButton(0))) TargetSetting();
         InputXY();
         Move();
         if (isTrace) MoveToTarget();
@@ -49,15 +53,22 @@ public class DefalutMove : MonoBehaviour
     }
 
     /// Target Setting
-    public void SetTargetRotation(Vector3 target)
+    public void TargetSetting()
     {
-        targetPos = target;
-        transform.LookAt(target);
+        Vector3 mousePos = Input.mousePosition;
+        Ray ray = Camera.main.ScreenPointToRay(mousePos);
+        RaycastHit hit;
 
-        Quaternion q = transform.localRotation;
-        q.x = 0; q.z = 0;
-        transform.localRotation = q;
-        isTrace = true;
+        if (Physics.Raycast(ray, out hit, 1000f))
+        {
+            targetPos = hit.point;
+            transform.LookAt(targetPos);
+
+            Quaternion q = transform.localRotation;
+            q.x = 0; q.z = 0;
+            transform.localRotation = q;
+            isTrace = true;
+        }
     }
 
     /// Target Tracing

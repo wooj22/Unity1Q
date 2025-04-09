@@ -19,7 +19,6 @@ public class CameraControll : MonoBehaviour
     float minimumZ = 1F;    // fDistance max
     float maximumZ = 30F;
 
-
     private float fVelocity = 0.0f;
     float fDistance_cur;
     float fSmoothTime = 0.1F;   // smooth, smaller is faster.
@@ -27,7 +26,6 @@ public class CameraControll : MonoBehaviour
     private float angleVelocity = 0.0f;
     private float angularSmoothTime = 0.2f;
     private float angularMaxSpeed = 15.0f;
-
 
     void Awake()
     {
@@ -58,17 +56,6 @@ public class CameraControll : MonoBehaviour
 
         fDistance -= Input.GetAxis("Mouse ScrollWheel");
         fDistance = Mathf.Clamp(fDistance, minimumZ, maximumZ);
-
-        // ÁÂÅ¬¸¯ À§Ä¡ Target Setting
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector3 mousePos = Input.mousePosition;
-            Ray ray = Camera.main.ScreenPointToRay(mousePos);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, 1000f))
-                GetComponent<DefalutMove>().SetTargetRotation(hit.point);
-        }
     }
 
     void LateUpdate()
